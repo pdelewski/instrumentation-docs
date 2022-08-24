@@ -1,4 +1,4 @@
-# instrumentation-docs
+# OTEL instrumentation technologies/languages (not full list)
 
 | `Instrumentation`  | `Java (JVM)`                   | `.Net (CLR)`                                    | `Go (Native, machine code`                             | `PHP (Zend engine)`           |
 |--------------------|--------------------------------|-------------------------------------------------|--------------------------------------------------------|-------------------------------|
