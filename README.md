@@ -8,18 +8,23 @@
 ### java manual instrumentation
 
 ```
-Span span = tracer.spanBuilder("my span").startSpan();
+    Span span = tracer.spanBuilder("my span").startSpan();
 
-// Make the span the current span
-try (Scope ss = span.makeCurrent()) {
-  // In this scope, the span is the current/active span
-} finally {
-    span.end();
-}
+    try (Scope ss = span.makeCurrent()) {
+    } finally {
+        span.end();
+    }
 ```
 
 ### .Net manual instrumentation
 
 ```
-using var myActivity = MyActivitySource.StartActivity("SayHello");
+    using var myActivity = MyActivitySource.StartActivity("SayHello");
+```
+
+### Go manual instrumentation
+
+```
+        __child_tracing_ctx, span := otel.Tracer("main").Start(ctx, "main")
+        defer span.End()
 ```
