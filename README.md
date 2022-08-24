@@ -25,6 +25,6 @@
 ### Go manual instrumentation
 
 ```
-        __child_tracing_ctx, span := otel.Tracer("main").Start(ctx, "main")
-        defer span.End()
+    __child_tracing_ctx, span := otel.Tracer("main").Start(ctx, "main")
+    defer span.End()
 ```
