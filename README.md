@@ -17,3 +17,9 @@ try (Scope ss = span.makeCurrent()) {
     span.end();
 }
 ```
+
+### .Net manual instrumentation
+
+```
+using var myActivity = MyActivitySource.StartActivity("SayHello");
+```
